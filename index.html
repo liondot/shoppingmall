@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vivid</title>
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawesome cdn  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- jquery  -->
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
+
+</head>
+<body>
+    <header id="header">
+          <div>
+                <div class="lnb">
+                   <nav>
+                        <ul>
+                            <li><a href="#none">NEW</a></li>
+                            <li><a href="#none">BEST</a></li>
+                            <li><a href="#none">WOMEN</a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li><a href="#none">APPAREL</a></li>
+                                        <li><a href="#none">아우터</a></li>
+                                        <li><a href="#none">원피스</a></li>
+                                        <li><a href="#none">블라우스/셔츠</a></li>
+                                        <li><a href="#none">티셔츠</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#none">BAC</a></li>
+                                        <li><a href="#none">백팩</a></li>
+                                        <li><a href="#none">메신저백</a></li>
+                                        <li><a href="#none">숄더백</a></li>
+                                        <li><a href="#none">토트백</a></li>
+                                        <li><a href="#none">랩탑백</a></li>
+                                        <li><a href="#none">클러치</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#none">SHOES</a></li>
+                                        <li><a href="#none">스니커즈</a></li>
+                                        <li><a href="#none">로퍼</a></li>
+                                        <li><a href="#none">레이스업</a></li>
+                                        <li><a href="#none">보트슈즈/슬립온</a></li>
+                                        <li><a href="#none">슬리퍼/뮬</a></li>
+                                        <li><a href="#none">샌들</a></li>
+                                        <li><a href="#none">부츠</a></li>
+                                        <li><a href="#none">슈즈악세사리</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#none">ACC</a></li>
+                                        <li><a href="#none">벨트/서스펜더</a></li>
+                                        <li><a href="#none">스파크/머플러</a></li>
+                                        <li><a href="#none">주얼리</a></li>
+                                        <li><a href="#none">패션 악세사리</a></li>
+                                        <li><a href="#none">시계</a></li>
+                                        <li><a href="#none">지갑</a></li>
+                                        <li><a href="#none">선글라스/안경</a></li>
+                                        <li><a href="#none">모자</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#none">MEN</a></li>
+                            <li><a href="#none">EVENT</a></li>
+                            <li><a href="#none">COMMUNITY</a></li>
+                        </ul>
+                   </nav>
+                   <div class="overlay">
+                   </div>
+                </div>       
+                <form>
+                    <div class="search">
+                        <input class="keyword" type="text" name="search" placeholder="비비드 주간 베스트">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+                <div class="my">
+                    <a href="#none" class="customer"><i class="far fa-user"></i></a>
+                    <a href="#none" class="cart"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+                <div class="logo">
+                    <a href="#none"><img src="img/logo.png" alt=""></a>
+                    <a href="#none" class="logo_dark"><img src="img/logo_dark.png" alt=""></a>
+                </div>
+            </di>
+    </header> 
+    <!-- header  section-->
+    <section id="visual">
+
+        <input type="radio" name="tabmenu" id="tab1" checked>
+        <input type="radio" name="tabmenu" id="tab2">
+        <input type="radio" name="tabmenu" id="tab3">
+        <div class="visuals">
+            <div class="visual">
+                <div class="visual_img">
+                </div>
+            </div>
+            <div class="visual">
+                <div class="visual_img">
+                </div>
+            </div>
+            <div class="visual">
+                <div class="visual_img">
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <label for="tab1">01</label>
+            <label for="tab2">02</label>
+            <label for="tab3">03</label>
+        </div>
+
+    </section>
+      <!-- visual section   -->
+      <section id="season"></section>
+      <!-- season section -->
+      <section id="collection"></section>
+      <!-- new section  -->
+      <section id="new"></section>
+      <!-- new section  -->
+      <section id="video"></section>
+      <!-- video section  -->
+    <footer id="footer">
+
+    </footer>
+    <!-- footer section  -->
+
+    <script>
+        // overlay : visiblie 
+        $('.lnb > nav > ul > li').on({
+            mouseover:function(){
+                $('.overlay').addClass('active');
+                $('.search').addClass('active')
+            },
+            mouseleave:function(){
+                $('.overlay').removeClass('active');
+                $('.search').removeClass('active')
+            }
+        });
+
+        // nav : font color change ,
+
+        $('.lnb > nav > ul').on({
+            mouseover:function(){
+                $(this).children().children().css({color:'#333'});
+                $('.search button').css({color:'#333'})
+                $('.my a').css({color:'#333'})
+                $('form').css({"border-bottom-color": "#333"})
+                $('.logo_dark').css({display:'block'})
+            },
+            mouseleave:function(){
+                $(this).children().children().css({color:'#fff'})
+                $('.search button').css({color:'#fff'})
+                $('.my a').css({color:'#fff'})
+                $('form').css({"border-bottom-color": "#fff"})
+                $('.logo_dark').css({display:'none'})
+
+            }
+        });
+
+  
+    </script>
+</body>
+</html>

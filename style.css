@@ -1,0 +1,253 @@
+:root {
+    --font-weight-right: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #999;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/************** header  **************/
+header {
+    padding: 0 60px;
+    display: flex;
+    height: 84px;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0;
+}
+
+header>div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.lnb>nav>ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: relative;
+    height: 84px;
+    align-items: center;
+    z-index: 100;
+}
+
+.lnb>nav>ul>li {
+    display: flex;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lnb>nav>ul>li:hover {
+    font-weight: var(--font-weight-bold);
+}
+
+.lnb>nav>ul>li>a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: #fff;
+}
+
+.lnb>nav>ul>li:first-child {
+    margin-left: 0;
+}
+
+.lnb>nav>ul>li:last-child {
+    margin-right: 0;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    display: flex;
+    left: 0;
+    padding-top: 40px;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-out;
+}
+
+.overlay {
+    width: 100vw;
+    height: 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+}
+
+.lnb>nav>ul li:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+}
+
+.lnb>nav>ul li:hover {
+    color: #333;
+}
+
+.lnb .overlay.active {
+    visibility: visible;
+    height: 450px;
+    opacity: 1;
+}
+
+.dropdown ul {
+    flex-direction: row;
+    width: 100%;
+    padding-left: 0;
+}
+
+.dropdown ul li {
+    font-size: 14px;
+    width: 120px;
+    margin: 0 10px;
+    padding: 6px;
+}
+
+.dropdown ul li a {
+    position: relative;
+    height: 100%;
+}
+
+.dropdown ul li a:after {
+    content: '';
+    width: 0;
+    height: 1px;
+    background: #333;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: all .3s ease;
+}
+
+.dropdown ul li a:hover:after {
+    width: 100%;
+}
+
+.dropdown ul li:first-child {
+    font-weight: var(--font-weight-bold);
+    pointer-events: none;
+}
+
+form {
+    margin-left: 42px;
+    border-bottom: 1px solid #fff;
+}
+
+.search input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+}
+
+.search input::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+.search.active input::placeholder {
+    color: #333;
+}
+
+.search button {
+    border: none;
+    background-color: transparent;
+    width: 18px;
+    height: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.my {
+    margin-left: 30px;
+}
+
+.my a {
+    color: #fff;
+}
+
+.my .cart {
+    margin-left: 26px;
+}
+
+.logo {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    width: 104px;
+    height: 32px;
+    position: relative;
+}
+
+.logo_dark {
+    display: none;
+    position: absolute;
+}
+
+/************** visual  **************/
+
+#visual {
+    width: 100%;
+    height: 100%;
+}
+
+.visual {
+    background: url('img/visual_main.png') no-repeat center / cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+
+/************** season  **************/
+
+
+/************** collection  **************/
+
+
+/************** new  **************/
+
+
+/************** video  **************/
+
+
+/************** footer  **************/

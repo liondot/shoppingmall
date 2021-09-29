@@ -1,19 +1,3 @@
-/** 
- * 마일스톤 관련 util 
- * @ClassName milestoneApp 
- * @Description milestoneApp javascript  
- * @Modification-Information 
- * <pre> 
- *    수정일       수정자              수정내용 
- *  ----------   ----------   ------------------------------- 
- *  2019. 11. 14.   윤지환        최초생성 
- * </pre> 
- * @author A-CDM 시스템 : 윤지환
- * @since 2019. 11. 14. 
- * @version 1.0 
- * @see  
-*/
-
 :root {
     --font-weight-right: 300;
     --font-weight-regular: 400;
@@ -35,6 +19,10 @@ li {
     list-style: none;
 }
 
+ul {
+    margin: 0;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -46,7 +34,7 @@ body {
 
 .container {
     width: 1200px;
-    margin: 0 auto;
+    margin: 70px auto;
 }
 
 
@@ -87,11 +75,7 @@ span {
 
 
 /************** header  **************/
-/* 
-treyter
-trgr 
 
-*/
 header {
     padding: 0 60px;
     display: flex;
@@ -127,7 +111,6 @@ header>div {
     font-weight: var(--font-weight-medium);
     height: 100%;
     align-items: center;
-    cursor: pointer;
 }
 
 .lnb>nav>ul>li:hover {
@@ -202,9 +185,15 @@ header>div {
     padding: 6px;
 }
 
+.dropdown ul li:first-child a {
+    font-weight: bold;
+    cursor: unset;
+}
+
 .dropdown ul li a {
     position: relative;
     height: 100%;
+    font-weight: lighter;
 }
 
 .dropdown ul li a:after {
@@ -360,7 +349,7 @@ input[id=tab3]:checked~.visuals {
 
 /************** season  **************/
 .season {
-    margin: 140px auto;
+    padding: 70px 0;
     display: flex;
 }
 
@@ -392,8 +381,8 @@ input[id=tab3]:checked~.visuals {
     background: #f5f5f5;
 }
 
-.collection_section.container {
-    padding: 92px 0;
+.collection_section {
+    padding: 70px 0;
     overflow: hidden;
     position: relative;
 }
@@ -474,21 +463,283 @@ input[id=cell_tab3]:checked~.collections {
 }
 
 
+/************** new  **************/
+.new {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.newitems {
+    display: flex;
+    justify-content: space-between;
+    width: 200%;
+    transition: all .5s ease;
+}
+
+.newitem {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+
+}
+
+.newitem_info {
+    width: 100%;
+}
+
+.newitem_info h2 {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 44px 0 0;
+}
+
+.newitem_info p {
+    padding: 35px 0 50px;
+}
+
+.newitem_photo_box {
+    display: flex;
+    position: relative;
+}
+
+.item {
+    margin: 0 10px;
+}
+
+.item.photo .newitem_photo {
+    width: 450px;
+    height: 450px;
+    background: #f6f7f9 url(img/new1.png) no-repeat center;
+}
+
+.item.photo:last-child {
+    margin-right: 0;
+}
+
+.item.photo:last-child .newitem_photo {
+    width: 450px;
+    height: 450px;
+    background: #f6f7f9 url(img/new2.png) no-repeat center;
+}
+
+.photo_name {
+    font-size: 12px;
+    padding: 18px 0 0;
+    line-height: 1;
+    position: relative;
+}
+
+.item .photo_name em {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    display: block;
+    background: #f23b34;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.item .photo_name em:before {
+    content: '';
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    background: #dedede;
+}
+
+.item .photo_name em:after {
+    content: '';
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    position: absolute;
+    right: 40px;
+    background: #1c1c1c;
+}
+
+.item:last-child .photo_name em {
+    background: #7d2b0d;
+}
+
+.item:last-child .photo_name em:before {
+    background: #dedede;
+}
+
+.item:last-child .photo_name em:after {
+    background: #1c1c1c;
+}
+
+.photo_price {
+    font-size: 12px;
+    color: #888888;
+    text-decoration: line-through;
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+}
+
+.photo_price:after {
+    content: '280,000';
+    font-size: 13px;
+    color: #000;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    font-weight: var(--font-weight-medium);
+    margin-left: 5px;
+}
+
+.newitem_btn {
+    position: absolute;
+    font-size: 13px;
+}
+
+.newitem_btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #aaa;
+}
+
+.newitem_btn label {
+    cursor: pointer;
+}
+
+.newitem_button:first-child {
+    margin-right: 35px;
+}
+
+.new input {
+    visibility: hidden;
+}
+
+input[id=newtab1]:checked~.newitem_btn label[for=newtab1],
+input[id=newtab2]:checked~.newitem_btn label[for=newtab2] {
+    color: #000;
+}
+
+input[id=newtab1]:checked~.newitems {
+    margin-left: 0;
+}
+
+input[id=newtab2]:checked~.newitems {
+    margin-left: -100%;
+}
 
 
+/************** video  **************/
+.video {
+    padding: 70px 0;
+}
 
-
-
-/* .none {
+/* 
+.none {
     display: none;
 } */
 
 
-
-/************** new  **************/
-
-
-/************** video  **************/
-
-
 /************** footer  **************/
+#footer {
+    background: #f5f5f5;
+    position: relative;
+}
+
+.footer.container {
+    margin: 70px auto 0;
+}
+
+.company_info {
+    padding: 50px 0 55px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.company_info:after {
+    content: '';
+    position: absolute;
+    left: -450px;
+    bottom: 0;
+    background: #e8e8e8;
+    width: 3000px;
+    height: 1px;
+}
+
+.company_info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.company_info span {
+    font-size: 15px;
+    font-weight: var(--font-weight-medium);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    cursor: unset;
+}
+
+.company_info div:nth-child(2) span,
+.company_info div:nth-child(3) span,
+.company_info div:last-child span {
+    margin-bottom: 25px;
+}
+
+
+.company_info em {
+    font-size: 30px;
+    font-weight: var(--font-weight-medium);
+    font-style: unset;
+}
+
+.company_info p {
+    font-size: 13px;
+    font-weight: var(--font-weight-regular);
+    padding: 0;
+    line-height: 25px;
+    color: #858585;
+}
+
+.footer_adress {
+    display: flex;
+    justify-content: space-between;
+    padding: 42px 0;
+}
+
+.footer_adress .adress p {
+    padding: 0;
+    font-size: 12px;
+    font-weight: var(--font-weight-regular);
+    line-height: 22px;
+    color: #858585;
+}
+
+.footer_adress .adress p em {
+    font-style: unset;
+    color: #000;
+}
+
+.footer_adress .social ul {
+    display: flex;
+    padding: 0;
+}
+
+.footer_adress .social li {
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.footer_adress .social li .fab {
+    font-size: 18px;
+    color: #858585;
+}
+
+.footer_adress .social li span {
+    color: transparent;
+    font-size: 0;
+}

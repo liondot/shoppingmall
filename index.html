@@ -192,17 +192,125 @@
           </div>
       </section>
       <!-- new section  -->
-      <section id="new"></section>
+      <section id="new">
+          <div class="new container">
+            <input type="radio" name="newtab" id="newtab1" checked>
+            <input type="radio" name="newtab" id="newtab2">
+
+            <div class="newitems">
+                <div class="newitem">
+                    <div class="newitem_info">
+                        <h2>Autumn Winter <br>
+                            New Collection
+                        </h2>
+                        <p>비비드의 가을/겨울 <br>
+                            최신 컬렉션을 만나보세요.
+                        </p>
+                        <span>+VIEW MORE</span>
+                    </div>
+                    <div class="newitem_photo_box">
+                        <div class="item photo">
+                            <div class="newitem_photo"></div>
+                            <div class="photo_name">미니 토드 레이디백 <em></em></div>
+                            <div class="photo_price">280,000</div>
+                        </div>
+                        <div class="item photo">
+                            <div class="newitem_photo"></div>
+                            <div class="photo_name">아르코  체인백<em></em></div>
+                            <div class="photo_price">280,000</div>
+                        </div>
+                    </div>             
+                </div>
+                <div class="newitem">
+                    <div class="newitem_info">
+                        <h2>3/4 season <br>
+                            BEST SELLING
+                        </h2>
+                        <p>비비드의 가을/겨울 <br>
+                            최신 컬렉션을 만나보세요.
+                        </p>
+                        <span>+VIEW MORE</span>
+                    </div>
+                    <div class="newitem_photo_box">
+                        <div class="item photo">
+                            <div class="newitem_photo"></div>
+                            <div class="photo_name">미니 토드 레이디백 <em></em></div>
+                            <div class="photo_price">280,000</div>
+                        </div>
+                        <div class="item photo">
+                            <div class="newitem_photo"></div>
+                            <div class="photo_name">아르코  체인백<em></em></div>
+                            <div class="photo_price">280,000</div>
+                        </div>
+                    </div>             
+                </div>
+                   
+                   
+            </div>
+
+            <div class="newitem_btn">
+                <label class="newitem_button active" for="newtab1">NEW IN</label>
+                <label class="newitem_button"  for="newtab2">BEST SELLING</label>
+            </div>
+            </div>
+          </div>
+      </section>
       <!-- new section  -->
-      <section id="video"></section>
+      <section id="video">
+        <div class="video container">
+            <iframe width="1200" height="675" src="https://www.youtube.com/embed/ujgc4poseYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
       <!-- video section  -->
     <footer id="footer">
-
+        <div class="footer container">
+            <div class="company_info">
+                <div>
+                    <span>CUSTOMER CENTER</span>
+                    <em>02-1234-4568</em>
+                    <p>MON-FRI. 09:00-17:00(LUNCH.12:30-13:30) <br>
+                        SAT.SUN.HOLIDAY CLOSE
+                    </p>
+                </div>
+                <div>
+                    <span>BANK</span>
+                    <p>코리아은행 1234-5678-910-11 (주)비비드</p>
+                </div>
+                <div>
+                    <span>RETURNS & EXCHANGES</span>
+                    <p>반품주소 <br>
+                        코리아은행 1234-5678-910-11 (주)비비드</p>
+                </div>
+                <div>
+                    <span>ABOUT</span>
+                    <p>회사소개</p>
+                    <p>이용안내</p>
+                    <p>이용약관</p>
+                    <p>개인정보처리방침</p>
+                </div>
+            </div>
+            <div class="footer_adress">
+                <div class="adress">
+                   <p>
+                    상호. (주)비비드  |  대표. 홍길동  |  이메일. vivid@cocen.co.kr <br>
+                    주소. 서울시  금천구 가산디지털1로 168 우림라이온스밸리  |  전화. 02-1234-5678  |  팩스. 02-1234-5678 <br>
+                    사업자등록번호. 123-45-67890 <em>[사업자정보확인] </em> |  통신판매업신고번호. 제2020-서울금천-0123호  |  개인정보보호책임자. 홍길동
+                   </p>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li><i class="fab fa-instagram"></i><span>instagram</span></li>
+                        <li><i class="fab fa-facebook-f"></i><span>facebook</span></li>
+                        <li><i class="fab fa-youtube"></i><span>youtube</span></li>
+                    </ul>
+                 </div>
+            </div>
+        </div>
     </footer>
     <!-- footer section  -->
 
     <script>
-        // overlay : visiblie 
+        // .lnb > nav > ul li:hover -> overlay : visiblie 
         $('.lnb > nav > ul > li').on({
             mouseover:function(){
                 $('.overlay').addClass('active');
@@ -214,8 +322,7 @@
             }
         });
 
-        // nav : font color change ,
-
+        // lnb : font color change ,
         $('.lnb > nav > ul').on({
             mouseover:function(){
                 $(this).children().children().css({color:'#333'});

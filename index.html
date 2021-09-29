@@ -7,18 +7,19 @@
     <title>vivid</title>
     <!-- style -->
     <link rel="stylesheet" href="style.css">
+    <!-- script  -->
+    <script src="js/main.js" defer></script>
     <!-- fontawesome cdn  -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <!-- font  -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
     <!-- jquery  -->
-    <script
-        src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- swiper  css & js-->
+    <link rel="stylesheet" href="css/swiper.css">
+    <script src="js/swiper.min.js"></script>
 
 </head>
 <body>
@@ -90,33 +91,23 @@
                     <a href="#none" class="cart"><i class="fas fa-shopping-cart"></i></a>
                 </div>
                 <div class="logo">
-                    <a href="#none"><img src="img/logo.png" alt=""></a>
-                    <a href="#none" class="logo_dark"><img src="img/logo_dark.png" alt=""></a>
+                    <a href="#visual"><img src="img/logo.png" alt=""></a>
+                    <a href="#visual" class="logo_dark"><img src="img/logo_dark.png" alt=""></a>
                 </div>
             </di>
     </header> 
     <!-- header  section-->
     <section id="visual">
-
-        <div class="visual_section box">
-            <input type="radio" name="tabmenu" id="tab1" checked>
-            <input type="radio" name="tabmenu" id="tab2">
-            <input type="radio" name="tabmenu" id="tab3">
-    
-            <div class="visuals">
-                <div class="visual">
+        <div class="visual_section box swiper">
+            <div class="visuals swiper-wrapper">
+                <div class="visual swiper-slide">
                 </div>
-                <div class="visual">
+                <div class="visual swiper-slide">
                 </div>
-                <div class="visual">
+                <div class="visual swiper-slide">
                 </div>
             </div>
-    
-            <div class="btn">
-                <label for="tab1">01</label>
-                <label for="tab2">02</label>
-                <label for="tab3">03</label>
-            </div>
+            <div class="swiper-pagination"></div>
         </div>
 
     </section>
@@ -337,9 +328,31 @@
                 $('.my a').css({color:'#fff'})
                 $('form').css({"border-bottom-color": "#fff"})
                 $('.logo_dark').css({display:'none'})
-
             }
         });
+
+        // visual swiper 
+        const swiper = new Swiper(".swiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            },
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+            },
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+        });
+
+      
 
   
     </script>

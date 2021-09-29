@@ -23,6 +23,10 @@ ul {
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -86,6 +90,9 @@ header {
     width: 100%;
     top: 0px;
     left: 0;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
 }
 
 header>div {
@@ -93,6 +100,14 @@ header>div {
     align-items: center;
     width: 100%;
 }
+
+#header {}
+
+#header.header--dark {
+    background: #999;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
 
 .lnb>nav>ul {
     padding: 0;
@@ -106,14 +121,15 @@ header>div {
 
 .lnb>nav>ul>li {
     display: flex;
-    padding: 0 20px;
+    /* padding: 0 20px; */
+    width: 85px;
     font-size: 16px;
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-regular);
     height: 100%;
     align-items: center;
 }
 
-.lnb>nav>ul>li:hover {
+.lnb>nav>ul>li>:hover {
     font-weight: var(--font-weight-bold);
 }
 
@@ -183,17 +199,21 @@ header>div {
     width: 120px;
     margin: 0 10px;
     padding: 6px;
+    font-weight: var(--font-weight-right);
 }
 
 .dropdown ul li:first-child a {
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     cursor: unset;
 }
 
 .dropdown ul li a {
     position: relative;
     height: 100%;
-    font-weight: lighter;
+}
+
+.dropdown ul li a:hover {
+    font-weight: var(--font-weight-medium);
 }
 
 .dropdown ul li a:after {
@@ -288,7 +308,7 @@ form {
     position: absolute;
     top: 0;
     left: 0;
-    transition: .3s;
+    transition: .5s ease-in;
 }
 
 .visual {
@@ -310,41 +330,27 @@ input[name=tabmenu] {
     display: none;
 }
 
-.btn {
+.swiper-pagination {
     position: absolute;
+    width: 100%;
     right: 60px;
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    padding-right: 60px;
 }
 
-.btn label {
-    display: block;
+.swiper-pagination span {
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+    color: #fff;
+    border: none;
     margin: 15px 0;
     font-size: 16px;
-    color: #fff;
-    font-weight: var(--font-weight-medium);
     cursor: pointer;
-    transition: .3s;
     text-align: right;
-}
 
-input[id=tab1]:checked~.btn label[for=tab1],
-input[id=tab2]:checked~.btn label[for=tab2],
-input[id=tab3]:checked~.btn label[for=tab3] {
-    font-size: 32px;
-    font-weight: var(--font-weight-bold);
-}
-
-input[id=tab1]:checked~.visuals {
-    margin-left: 0;
-}
-
-input[id=tab2]:checked~.visuals {
-    margin-left: -100%;
-}
-
-input[id=tab3]:checked~.visuals {
-    margin-left: -200%;
 }
 
 /************** season  **************/
@@ -404,6 +410,7 @@ input[id=tab3]:checked~.visuals {
     height: 580px;
     position: relative;
     display: flex;
+
 }
 
 .clt.img {
@@ -474,7 +481,7 @@ input[id=cell_tab3]:checked~.collections {
     display: flex;
     justify-content: space-between;
     width: 200%;
-    transition: all .5s ease;
+    transition: all .3s ease-in;
 }
 
 .newitem {
@@ -636,11 +643,6 @@ input[id=newtab2]:checked~.newitems {
     padding: 70px 0;
 }
 
-/* 
-.none {
-    display: none;
-} */
-
 
 /************** footer  **************/
 #footer {
@@ -657,6 +659,8 @@ input[id=newtab2]:checked~.newitems {
     display: flex;
     justify-content: space-between;
     position: relative;
+
+
 }
 
 .company_info:after {

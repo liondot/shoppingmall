@@ -24,7 +24,8 @@
 </head>
 <body>
     <header id="header">
-          <div>
+            <h2 class="hide">header섹션: 메뉴, 검색, 로그인</h2>
+            <div>
                 <div class="lnb">
                    <nav>
                         <ul>
@@ -94,10 +95,11 @@
                     <a href="#visual"><img src="img/logo.png" alt=""></a>
                     <a href="#visual" class="logo_dark"><img src="img/logo_dark.png" alt=""></a>
                 </div>
-            </di>
+            </div>
     </header> 
     <!-- header  section-->
     <section id="visual">
+        <h2 class="hide">비주얼 섹션</h2>
         <div class="visual_section box swiper">
             <div class="visuals swiper-wrapper">
                 <div class="visual swiper-slide">
@@ -113,6 +115,7 @@
     </section>
       <!-- visual section   -->
       <section id="season">
+          <h2 class="hide">시즌 베스트 뉴 컬러, 컬러 조화</h2>
           <div class="season container">
               <div class="left">
                  <h3>시즌 베스트 뉴 컬러</h3>
@@ -136,13 +139,11 @@
       </section>
       <!-- season section -->
       <section id="collection">
-          <div class="collection_section container">
-              <input type="radio" name="tab" id="cell_tab1" checked>
-              <input type="radio" name="tab" id="cell_tab2">
-              <input type="radio" name="tab" id="cell_tab3">
+          <h2 class="hide">컬랙션 매거진</h2>
+          <div class="collection_section container swiper">
 
-            <div class="collections">
-                <div class="collection">
+            <div class="collections swiper-wrapper">
+                <div class="collection swiper-slide">
                     <div class="clt img"></div>
                     <div class="descrip">
                         <h3>미니멀리즘과 심플리시티무드</h3>
@@ -152,7 +153,7 @@
                         <span>+ VIEW MORE</span>
                     </div>
                 </div>
-                <div class="collection">
+                <div class="collection swiper-slide">
                     <div class="clt img"></div>
                     <div class="descrip">
                         <h3>미니멀리즘과 심플리시티무드</h3>
@@ -162,7 +163,7 @@
                         <span>+ VIEW MORE</span>
                     </div>
                 </div>
-                <div class="collection">
+                <div class="collection swiper-slide">
                     <div class="clt img"></div>
                     <div class="descrip">
                         <h3>미니멀리즘과 심플리시티무드</h3>
@@ -174,16 +175,12 @@
                 </div>
             </div>
 
-            <div class="clt btn">
-                <label for="cell_tab1">01</label>
-                <label for="cell_tab2">02</label>
-                <label for="cell_tab3">03</label>
-            </div>
-
+            <div class="collection_pagination swiper-pagination"></div>
           </div>
       </section>
       <!-- new section  -->
       <section id="new">
+          <h2 class="hide">새로운 아이템 소개</h2>
           <div class="new container">
             <input type="radio" name="newtab" id="newtab1" checked>
             <input type="radio" name="newtab" id="newtab2">
@@ -235,25 +232,25 @@
                         </div>
                     </div>             
                 </div>
-                   
-                   
             </div>
 
             <div class="newitem_btn">
                 <label class="newitem_button active" for="newtab1">NEW IN</label>
                 <label class="newitem_button"  for="newtab2">BEST SELLING</label>
             </div>
-            </div>
           </div>
+     
       </section>
       <!-- new section  -->
       <section id="video">
+        <h2 class="hide">브랜드 소개 영상</h2>
         <div class="video container">
-            <iframe width="1200" height="675" src="https://www.youtube.com/embed/ujgc4poseYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="1200" height="675" src="https://www.youtube.com/embed/k3rUzmGK1Hs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </section>
       <!-- video section  -->
     <footer id="footer">
+        <h2 class="hide">회사 소개, 계좌정보, 소셜링크</h2>
         <div class="footer container">
             <div class="company_info">
                 <div>
@@ -274,10 +271,10 @@
                 </div>
                 <div>
                     <span>ABOUT</span>
-                    <p>회사소개</p>
-                    <p>이용안내</p>
-                    <p>이용약관</p>
-                    <p>개인정보처리방침</p>
+                    <p><a href="#none">회사소개</a></p>
+                    <p><a href="#none">이용안내</a></p>
+                    <p><a href="#none">이용약관</a></p>
+                    <p><a href="#none">개인정보처리방침</a></p>
                 </div>
             </div>
             <div class="footer_adress">

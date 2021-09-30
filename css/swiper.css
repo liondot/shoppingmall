@@ -161,7 +161,7 @@
     position: absolute;
     text-align: center;
     transition: 300ms opacity;
-    transform: translate3d(0, 0, 0);
+    /* transform: translate3d(0, 0, 0); */
     z-index: 10;
 }
 
@@ -213,7 +213,6 @@
     transform: scale(0.33);
 }
 
-
 button.swiper-pagination-bullet {
     border: none;
     margin: 0;
@@ -226,15 +225,42 @@ button.swiper-pagination-bullet {
 }
 
 
+/* css 변경 (author: yoonseonhwa) */
 
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: 0;
+    left: 0;
+}
+
+/* visual swiper  */
 .swiper-pagination-clickable .swiper-pagination-bullet {
     cursor: pointer;
     transition: all .3s ease-in;
 }
 
-
 .swiper-pagination-bullet-active {
     font-size: 32px !important;
     font-weight: var(--font-weight-bold) !important;
 
+}
+
+#collection .swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: unset;
+}
+
+.collection_pagination.swiper-pagination {
+    padding-right: 0;
+}
+
+.collection_pagination.swiper-pagination span {
+    color: #000;
+}
+
+/* collection swiper  */
+.collection.swiper-slide:after {
+    background: none;
 }

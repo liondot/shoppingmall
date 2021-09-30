@@ -9,20 +9,6 @@
     box-sizing: border-box;
 }
 
-
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-li {
-    list-style: none;
-}
-
-ul {
-    margin: 0;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -40,6 +26,25 @@ body {
     width: 1200px;
     margin: 70px auto;
 }
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+}
+
+/* reset css  */
+.hide {
+    display: none;
+}
+
 
 
 @font-face {
@@ -333,7 +338,6 @@ input[name=tabmenu] {
 .swiper-pagination {
     position: absolute;
     width: 100%;
-    right: 60px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -385,6 +389,10 @@ input[name=tabmenu] {
 /************** collection  **************/
 #collection {
     background: #f5f5f5;
+}
+
+.collection_section {
+    position: relative;
 }
 
 .collection_section {
@@ -641,6 +649,7 @@ input[id=newtab2]:checked~.newitems {
 /************** video  **************/
 .video {
     padding: 70px 0;
+    /* frameborder="0" */
 }
 
 
@@ -706,6 +715,10 @@ input[id=newtab2]:checked~.newitems {
     font-weight: var(--font-weight-regular);
     padding: 0;
     line-height: 25px;
+    color: #858585;
+}
+
+.company_info div:last-child p a {
     color: #858585;
 }
 

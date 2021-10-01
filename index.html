@@ -11,10 +11,6 @@
     <script src="js/main.js" defer></script>
     <!-- fontawesome cdn  -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <!-- font  -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
     <!-- jquery  -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- swiper  css & js-->
@@ -109,7 +105,7 @@
                 <div class="visual swiper-slide">
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="visual-pagination swiper-pagination"></div>
         </div>
 
     </section>
@@ -181,12 +177,10 @@
       <!-- new section  -->
       <section id="new">
           <h2 class="hide">새로운 아이템 소개</h2>
-          <div class="new container">
-            <input type="radio" name="newtab" id="newtab1" checked>
-            <input type="radio" name="newtab" id="newtab2">
+          <div class="new container new_swiper swiper">
 
-            <div class="newitems">
-                <div class="newitem">
+            <div class="newitems swiper-wrapper">
+                <div class="newitem swiper-slide">
                     <div class="newitem_info">
                         <h2>Autumn Winter <br>
                             New Collection
@@ -209,7 +203,7 @@
                         </div>
                     </div>             
                 </div>
-                <div class="newitem">
+                <div class="newitem swiper-slide">
                     <div class="newitem_info">
                         <h2>3/4 season <br>
                             BEST SELLING
@@ -234,10 +228,10 @@
                 </div>
             </div>
 
-            <div class="newitem_btn">
-                <label class="newitem_button active" for="newtab1">NEW IN</label>
-                <label class="newitem_button"  for="newtab2">BEST SELLING</label>
-            </div>
+            <div class="new-pagination swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
      
       </section>
@@ -310,7 +304,7 @@
             }
         });
 
-        // lnb : font color change ,
+        // lnb : font color change 
         $('.lnb > nav > ul').on({
             mouseover:function(){
                 $(this).children().children().css({color:'#333'});
@@ -328,8 +322,9 @@
             }
         });
 
-        // visual swiper 
-        const swiper = new Swiper(".swiper", {
+           //visual, collection slide
+            var zoroNumber = ["01", "02", "03"];
+            const swiper = new Swiper(".swiper", {
             spaceBetween: 30,
             centeredSlides: true,
             autoplay: {
@@ -340,7 +335,7 @@
             el: ".swiper-pagination",
             clickable: true,
             renderBullet: function (index, className) {
-                return '<span class="' + className + '">' + (index + 1) + "</span>";
+                return '<span class="' + className + '">'  + (zoroNumber[index]) + "</span>";
             },
             },
             navigation: {
@@ -348,10 +343,28 @@
             prevEl: ".swiper-button-prev",
             },
         });
-
       
-
-  
+        // new item slide
+        var myArray = ["NEW IN","BEST SELLING"];
+        const newSwiper = new Swiper(".new_swiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            },
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">'  + (myArray[index]) + "</span>";
+            },
+            },
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+        }); 
     </script>
 </body>
 </html>

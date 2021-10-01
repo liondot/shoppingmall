@@ -635,7 +635,7 @@ input[id=newtab2]:checked~.newitems {
 
 .new-pagination.swiper-pagination span {
     color: #aaaaaa;
-    width: 95px;
+    width: 100px;
     height: auto;
     text-align: left;
     font-size: 13px;
